@@ -1,0 +1,27 @@
+// Dev container for the Forge SWEXP starter repo.
+// Open in GitHub Codespaces (Code -> Codespaces -> Create) or VS Code Dev Containers
+// for a zero-setup environment with Git, the right runtime, and the gh CLI preinstalled.
+// Then follow README.md / Lesson_00.md to pick up your first ticket.
+{
+  "name": "SWEXP 06 Backend Engineering API Design",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "echo '\\n=== Forge SWEXP environment ready ==='; git --version; node --version 2>/dev/null; echo 'Open README.md, then Lesson_00.md to begin.'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "remoteUser": "node"
+}
